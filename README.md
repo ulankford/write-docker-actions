@@ -36,3 +36,8 @@ If you aren't already familiar, it may be a good idea to go through the [Introdu
 ---
 
 **Please navigate to the open issue in this repository to get started!**
+
+What is a workflow file?
+A workflow file can be thought of as the recipe for automating a task. They house the start-to-finish instructions, in the form of jobs and steps, for what should happen based on specific triggers.
+
+Your repository can contain multiple workflow files that carry out a wide variety of tasks. It is important to consider this when deciding on a name for your workflow. The name you choose should reflect the tasks being performed.
