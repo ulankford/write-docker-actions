@@ -26,3 +26,30 @@ After all, for each time we need to reinvent the wheel for our specific use-case
 
 ---
 
+### Example
+
+A custom action is called from within the workflow file
+
+```
+name: Docker Actions
+
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: hello-action
+        uses: ./.github/actions/hello-world
+
+      - name: meow
+        uses: ./.github/actions/cat-facts
+```
+
+In each of the directories one can have a seperate action.yml file, a Dockerfile and some code that gets imported into the Docker Conatainer.
+
