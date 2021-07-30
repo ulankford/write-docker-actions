@@ -1,4 +1,3 @@
-# Welcome to your course 🎉
 
 ### Getting started
 
@@ -17,7 +16,7 @@ As you can see we aren't necessarily limited to Docker even though it is the foc
 
 ### Creating vs consuming actions
 
-Although we are going to focus on creating and consuming a custom action, in this course we will also be consuming some actions that have been made public to us. Because your workflows will most likely do the same, I found it important to show you where to look for actions that already exist.
+Although we can focus on creating and consuming a custom action, we will also be consuming some actions that have been made public to us. Because your workflows will most likely do the same.
 
 After all, for each time we need to reinvent the wheel for our specific use-case there are a handful of times when we are better off using a wheel that's already made!
 
@@ -27,17 +26,3 @@ After all, for each time we need to reinvent the wheel for our specific use-case
 
 ---
 
-### Using actions and Learning Lab
-
-In other courses, you may have noticed that some behaviors take me longer to respond to than others. In this course, many of the behaviors we'll see demonstrated will be related to our GitHub Actions workflow. Those workflows sometimes take longer to complete, up to several minutes. Don't be concerned if I take a few minutes to respond, or if I respond too quickly. Sometimes, I'll let you know what the workflow will say before it finishes! Please wait for the workflows to finish before moving on to your next step.
-
-If you aren't already familiar, it may be a good idea to go through the [Introduction to GitHub Learning Lab](https://lab.github.com/githubtraining/introduction-to-github).
-
----
-
-**Please navigate to the open issue in this repository to get started!**
-
-What is a workflow file?
-A workflow file can be thought of as the recipe for automating a task. They house the start-to-finish instructions, in the form of jobs and steps, for what should happen based on specific triggers.
-
-Your repository can contain multiple workflow files that carry out a wide variety of tasks. It is important to consider this when deciding on a name for your workflow. The name you choose should reflect the tasks being performed.
