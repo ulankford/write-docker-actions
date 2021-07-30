@@ -64,6 +64,10 @@ CMD ["hello"]
 ```
 
 #### action.yml
+
+Action metadata
+You learned that every action is accompanied by an action.yml file which contains a series of metadata for how the action behaves. This file defines all of an actions inputs, outputs, runtime environment, name, description and even branding.
+
 ```
 name: "my hello action"
 
