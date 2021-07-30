@@ -53,3 +53,67 @@ jobs:
 
 In each of the directories one can have a seperate action.yml file, a Dockerfile and some code that gets imported into the Docker Conatainer.
 
+#### Dockerfile
+```
+FROM golang:1.15
+WORKDIR /go/src/hello
+COPY . .
+RUN go get -d -v ./...
+RUN go install -v ./...
+CMD ["hello"]
+```
+
+#### action.yml
+```
+name: "my hello action"
+
+description: "say hello with GitHub Actions"
+
+inputs:
+  firstGreeting:
+    description: "who would you like to greet in the console"
+    required: true
+    default: "Hubot"
+
+  secondGreeting:
+    description: "another person to greet"
+    required: true
+    default: "Mona the Octocat"
+
+  thirdGreeting:
+    description: "a third greeting"
+    required: false
+
+runs:
+  using: "docker"
+  image: "Dockerfile
+```
+
+#### main.go
+```
+package main
+
+import (
+    "fmt"
+    "os"
+)
+
+func main() {
+
+// Access Inputs as environment vars
+firstGreeting := os.Getenv("INPUT_FIRSTGREETING")
+secondGreeting := os.Getenv("INPUT_SECONDGREETING")
+thirdGreeting := os.Getenv("INPUT_THIRDGREETING")
+
+// Use those inputs in the actions logic
+fmt.Println("Hello " + firstGreeting)
+fmt.Println("Hello " + secondGreeting)
+
+// Someimes inputs are not "required" and we can build around that
+if thirdGreeting != "" {
+    fmt.Println("Hello " + thirdGreeting)
+    }
+
+}
+```
+
